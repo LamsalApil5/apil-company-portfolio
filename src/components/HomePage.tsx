@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Code, Layers, Zap, ChevronRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import SEO from "./SEO";
 
 export default function HomePage() {
   const [scrollY, setScrollY] = useState(0);
@@ -17,14 +17,11 @@ export default function HomePage() {
 
   return (
     <>
-       <Helmet>
-        <title>Home | APIL</title>
-        <meta
-          name="description"
-          content="Welcome to My Website. Discover our premium services and innovative projects."
-        />
-        <meta name="keywords" content="APIL, technology solutions, business growth, software development, digital transformation" />
-      </Helmet>
+       <SEO 
+        title="Home | APIL" 
+        description="Welcome to My Website. Discover our premium services and innovative projects."
+        keywords="APIL, technology solutions, business growth, software development, digital transformation"
+      />
       <div className="overflow-hidden">
         {/* Hero Section */}
         <section className="relative py-20 md:py-32 overflow-hidden">

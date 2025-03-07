@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
 import HomePage from "./components/HomePage";
 import Navbar from "./components/navbar";
 import AboutPage from "./components/AboutPage";
@@ -14,7 +13,6 @@ import ScrollToTop from "./components/ScrollToTop";
 
 const App: React.FC = () => {
   return (
-    <HelmetProvider>
       <Router>
         <ScrollToTop />
         <div className="min-h-screen flex flex-col">
@@ -33,7 +31,6 @@ const App: React.FC = () => {
           <Footer />
         </div>
       </Router>
-    </HelmetProvider>
   );
 };
 
