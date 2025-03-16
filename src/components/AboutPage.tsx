@@ -1,4 +1,4 @@
-import { Users, Award, Clock, Globe } from 'lucide-react';
+import { Users, Award, Clock, Globe } from "lucide-react";
 
 export default function AboutPage() {
   return (
@@ -9,7 +9,8 @@ export default function AboutPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About Us</h1>
             <p className="text-xl text-gray-600">
-              We're a team of passionate designers and developers creating exceptional digital experiences.
+              We're a team of passionate designers and developers creating
+              exceptional digital experiences.
             </p>
           </div>
         </div>
@@ -22,13 +23,19 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl font-bold mb-6">Our Story</h2>
               <p className="text-lg text-gray-600 mb-6">
-                Founded in 2015, our studio began with a simple mission: to create beautiful, functional websites that help businesses succeed online.
+                Founded in 2015, our APIL began with a simple mission: to create
+                beautiful, functional websites that help businesses succeed
+                online.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                What started as a small team of three has grown into a diverse group of talented individuals, each bringing unique skills and perspectives to our work.
+                What started as a small team of three has grown into a diverse
+                group of talented individuals, each bringing unique skills and
+                perspectives to our work.
               </p>
               <p className="text-lg text-gray-600">
-                Today, we're proud to have worked with clients across various industries, from startups to established enterprises, helping them achieve their digital goals.
+                Today, we're proud to have worked with clients across various
+                industries, from startups to established enterprises, helping
+                them achieve their digital goals.
               </p>
             </div>
             <div className="relative">
@@ -52,7 +59,8 @@ export default function AboutPage() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl font-bold mb-6">Our Values</h2>
             <p className="text-lg text-gray-600">
-              These core principles guide everything we do and help us deliver exceptional results.
+              These core principles guide everything we do and help us deliver
+              exceptional results.
             </p>
           </div>
 
@@ -61,22 +69,26 @@ export default function AboutPage() {
               {
                 icon: <Users className="w-10 h-10 text-purple-500" />,
                 title: "Collaboration",
-                description: "We work closely with our clients, treating their goals as our own.",
+                description:
+                  "We work closely with our clients, treating their goals as our own.",
               },
               {
                 icon: <Award className="w-10 h-10 text-blue-500" />,
                 title: "Excellence",
-                description: "We strive for excellence in every project, no matter the size.",
+                description:
+                  "We strive for excellence in every project, no matter the size.",
               },
               {
                 icon: <Clock className="w-10 h-10 text-indigo-500" />,
                 title: "Timeliness",
-                description: "We respect deadlines and deliver projects on time, every time.",
+                description:
+                  "We respect deadlines and deliver projects on time, every time.",
               },
               {
                 icon: <Globe className="w-10 h-10 text-purple-500" />,
                 title: "Innovation",
-                description: "We embrace new technologies and approaches to solve problems.",
+                description:
+                  "We embrace new technologies and approaches to solve problems.",
               },
             ].map((value, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm">
@@ -102,18 +114,23 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                name: "Alex Johnson",
-                role: "Creative Director",
+                name: "Apil Lamsal",
+                role: "Founder & Web Developer",
                 image: "/placeholder.svg?height=400&width=400",
               },
               {
-                name: "Sarah Williams",
-                role: "Lead Developer",
+                name: "Ishwor Gautam",
+                role: "CEO",
                 image: "/placeholder.svg?height=400&width=400",
               },
               {
-                name: "Michael Chen",
-                role: "UX Designer",
+                name: "Kapil Pokhrel",
+                role: "Wardpress Developer",
+                image: "/placeholder.svg?height=400&width=400",
+              },
+              {
+                name: "Shivam Pokhrel",
+                role: "Wardpress Developer",
                 image: "/placeholder.svg?height=400&width=400",
               },
             ].map((member, index) => (
