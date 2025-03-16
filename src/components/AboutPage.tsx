@@ -116,22 +116,22 @@ export default function AboutPage() {
               {
                 name: "Apil Lamsal",
                 role: "Founder & Web Developer",
-                image: "/placeholder.svg?height=400&width=400",
+                image: "https://ui-avatars.com/api/?name=Apil+Lamsal&background=random",
               },
               {
                 name: "Ishwor Gautam",
                 role: "CEO",
-                image: "/placeholder.svg?height=400&width=400",
+                image: "https://ui-avatars.com/api/?name=Ishwor+Gautam&background=random",
+              },
+              {
+                name: "Shivam Ranabhat",
+                role: "Laravel Developer",
+                image: "https://ui-avatars.com/api/?name=Shivam+Ranabhat&background=random",
               },
               {
                 name: "Kapil Pokhrel",
-                role: "Wardpress Developer",
-                image: "/placeholder.svg?height=400&width=400",
-              },
-              {
-                name: "Shivam Pokhrel",
-                role: "Wardpress Developer",
-                image: "/placeholder.svg?height=400&width=400",
+                role: "Wordpress Developer",
+                image: "https://ui-avatars.com/api/?name=Kapil+Pokhrel&background=random",
               },
             ].map((member, index) => (
               <div key={index} className="text-center">
