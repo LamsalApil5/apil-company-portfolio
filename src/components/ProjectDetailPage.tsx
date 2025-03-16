@@ -1,65 +1,12 @@
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, ExternalLink, CheckCircle } from 'lucide-react';
+import { ArrowLeft, ExternalLink, CheckCircle } from "lucide-react";
+import { projectsDetailData } from "./data/projectsDetailData";
 
 // Sample project data (in a real app, this would come from a database or API)
-const projectsData = { 
-  1: {
-    title: "Corporate Website Redesign",
-    category: "Web Design",
-    client: "Global Finance Corp",
-    duration: "2 months",
-    year: "2023",
-    description: "Complete overhaul of a financial services website focusing on user experience and conversion.",
-    challenge: "Global Finance Corp's outdated website was difficult to navigate and wasn't effectively communicating their services or converting visitors into leads.",
-    solution: "We redesigned the website with a focus on clear communication, intuitive navigation, and strategic call-to-actions. The new design is modern, responsive, and optimized for conversions.",
-    results: [
-      "40% increase in lead generation",
-      "30% improvement in average time on site",
-      "25% reduction in bounce rate"
-    ],
-    technologies: ["React", "Next.js", "Tailwind CSS", "Contentful CMS"],
-    testimonial: {
-      quote: "The redesigned website has significantly improved our online presence and lead generation. It's exactly what we needed to take our digital marketing to the next level.",
-      author: "Michael Brown",
-      position: "Marketing Director, Global Finance Corp"
-    },
-    images: [
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800"
-    ]
-  },
-  2: {
-    title: "Fitness Tracking App",
-    category: "Mobile Apps",
-    client: "FitLife",
-    duration: "4 months",
-    year: "2023",
-    description: "iOS and Android app for tracking workouts, nutrition, and personal fitness goals.",
-    challenge: "FitLife wanted to create a comprehensive fitness app that would help users track their workouts, nutrition, and progress towards their fitness goals across both iOS and Android platforms.",
-    solution: "We developed a cross-platform mobile app using React Native, which allowed us to create a consistent experience across both iOS and Android. The app integrates with wearable devices, provides personalized workout plans, and includes a nutrition tracker.",
-    results: [
-      "Over 100,000 downloads in the first month",
-      "4.8 star rating on both App Store and Google Play",
-      "85% user retention rate after 3 months"
-    ],
-    technologies: ["React Native", "Firebase", "Redux", "HealthKit", "Google Fit API"],
-    testimonial: {
-      quote: "The FitLife app has exceeded our expectations. The user engagement and retention rates are impressive, and the feedback from our users has been overwhelmingly positive.",
-      author: "Lisa Chen",
-      position: "Product Manager, FitLife"
-    },
-    images: [
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800"
-    ]
-  }
-};
 
 export default function ProjectDetailPage() {
-  const { projectId } = useParams<{ projectId: string }>();
-  const project = projectsData[Number(projectId) as keyof typeof projectsData];
+  const { projectSlug } = useParams<{ projectSlug: string }>(); // Fetch the projectSlug
+  const project = projectsDetailData[projectSlug as keyof typeof projectsDetailData]; // Access the project data based on the slug
 
   if (!project) {
     return <div>Project not found</div>;
@@ -70,10 +17,15 @@ export default function ProjectDetailPage() {
       {/* Hero Section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-purple-50 to-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <Link to="/projects" className="inline-flex items-center text-purple-600 mb-6 hover:text-purple-700">
+          <Link
+            to="/projects"
+            className="inline-flex items-center text-purple-600 mb-6 hover:text-purple-700"
+          >
             <ArrowLeft className="w-4 h-4 mr-2" /> Back to Projects
           </Link>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">{project.title}</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            {project.title}
+          </h1>
           <p className="text-xl text-gray-600 mb-8">{project.description}</p>
           <div className="flex flex-wrap gap-4">
             <span className="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
@@ -85,7 +37,23 @@ export default function ProjectDetailPage() {
             <span className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">
               {project.duration}
             </span>
+            <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
+              {project.status}
+            </span>
           </div>
+          {project.liveLink && (
+            <div className="mt-6">
+              <a
+                href={project.liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-purple-600 hover:text-purple-700"
+              >
+                View Live Project
+                <ExternalLink className="w-5 h-5 ml-2" />
+              </a>
+            </div>
+          )}
         </div>
       </section>
 
@@ -128,10 +96,15 @@ export default function ProjectDetailPage() {
       {/* Technologies Used */}
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12 text-center">Technologies Used</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">
+            Technologies Used
+          </h2>
           <div className="flex flex-wrap justify-center gap-4">
             {project.technologies.map((tech, index) => (
-              <span key={index} className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">
+              <span
+                key={index}
+                className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium"
+              >
                 {tech}
               </span>
             ))}
@@ -144,7 +117,9 @@ export default function ProjectDetailPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-8">Client Testimonial</h2>
-            <blockquote className="text-xl italic mb-6">"{project.testimonial.quote}"</blockquote>
+            <blockquote className="text-xl italic mb-6">
+              "{project.testimonial.quote}"
+            </blockquote>
             <p className="font-medium">{project.testimonial.author}</p>
             <p className="text-purple-200">{project.testimonial.position}</p>
           </div>
@@ -154,7 +129,9 @@ export default function ProjectDetailPage() {
       {/* Project Gallery */}
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12 text-center">Project Gallery</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">
+            Project Gallery
+          </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {project.images.map((image, index) => (
               <img
@@ -172,9 +149,12 @@ export default function ProjectDetailPage() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Ready to start your project?</h2>
+            <h2 className="text-3xl font-bold mb-6">
+              Ready to start your project?
+            </h2>
             <p className="text-xl text-gray-600 mb-8">
-              Let's work together to create something amazing. Contact us today to get started.
+              Let's work together to create something amazing. Contact us today
+              to get started.
             </p>
             <Link
               to="/contact"

@@ -9,7 +9,9 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
-            <p className="text-xl text-gray-600">Comprehensive digital solutions tailored to your business needs.</p>
+            <p className="text-xl text-gray-600">
+              We offer a range of digital solutions tailored to meet your unique business needs. Whether you're starting out or looking to scale, we’re here to help you grow.
+            </p>
           </div>
         </div>
       </section>
@@ -18,37 +20,37 @@ export default function ServicesPage() {
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
+            {[ 
               {
                 icon: <Palette className="w-10 h-10 text-purple-500" />,
                 title: "Web Design",
-                description: "Beautiful, responsive websites that look great on any device and engage your audience.",
+                description: "We create beautiful, responsive websites that not only look great but also engage your audience across all devices."
               },
               {
                 icon: <Code className="w-10 h-10 text-blue-500" />,
                 title: "Web Development",
-                description: "Custom web applications built with modern technologies for optimal performance.",
+                description: "Custom-built web applications with modern technologies, ensuring optimal performance and user experience."
               },
               {
                 icon: <ShoppingBag className="w-10 h-10 text-indigo-500" />,
                 title: "E-Commerce",
-                description: "Online stores that drive sales with seamless shopping experiences and secure payments.",
+                description: "We help you set up online stores that make shopping a breeze for your customers, with secure payments and seamless experiences."
               },
               {
                 icon: <Search className="w-10 h-10 text-purple-500" />,
                 title: "SEO",
-                description: "Search engine optimization to improve your visibility and drive organic traffic.",
+                description: "Improve your search engine visibility and drive organic traffic through effective SEO strategies."
               },
               {
                 icon: <Smartphone className="w-10 h-10 text-blue-500" />,
                 title: "Mobile Apps",
-                description: "Native and cross-platform mobile applications for iOS and Android devices.",
+                description: "From native to cross-platform, we build mobile applications that work smoothly on both iOS and Android devices."
               },
               {
                 icon: <Zap className="w-10 h-10 text-indigo-500" />,
                 title: "Performance Optimization",
-                description: "Speed up your existing website for better user experience and search rankings.",
-              },
+                description: "We boost the speed and performance of your website to improve user experience and help with better search rankings."
+              }
             ].map((service, index) => (
               <div
                 key={index}
@@ -75,7 +77,7 @@ export default function ServicesPage() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl font-bold mb-6">Our Process</h2>
             <p className="text-lg text-gray-600">
-              We follow a proven methodology to ensure successful project delivery.
+              We follow a proven methodology to deliver results that align with your goals. Here's how we work:
             </p>
           </div>
 
@@ -85,33 +87,33 @@ export default function ServicesPage() {
                 number: "01",
                 title: "Discovery",
                 description:
-                  "We start by understanding your business, goals, and requirements through in-depth discussions.",
+                  "We take the time to understand your business, goals, and requirements to ensure we’re aligned right from the start."
               },
               {
                 number: "02",
                 title: "Planning",
-                description: "We create a detailed project plan outlining timelines, deliverables, and key milestones.",
+                description: "We work with you to craft a detailed project plan that outlines timelines, deliverables, and key milestones."
               },
               {
                 number: "03",
                 title: "Design",
-                description: "Our designers create wireframes and visual designs based on your brand and user needs.",
+                description: "Our designers craft wireframes and visual designs that reflect your brand and address your audience’s needs."
               },
               {
                 number: "04",
                 title: "Development",
-                description: "Our developers bring the designs to life with clean, efficient code and regular updates.",
+                description: "Our developers bring your vision to life using clean, efficient code, providing regular updates along the way."
               },
               {
                 number: "05",
                 title: "Testing",
-                description: "We thoroughly test all aspects of your project to ensure quality and performance.",
+                description: "We test every part of the project to ensure quality, performance, and usability before it goes live."
               },
               {
                 number: "06",
                 title: "Launch",
-                description: "We deploy your project and provide support to ensure a smooth launch.",
-              },
+                description: "We help you deploy your project, ensuring a smooth launch, and offer ongoing support to keep things running smoothly."
+              }
             ].map((step, index) => (
               <div key={index} className="flex items-start mb-12 last:mb-0">
                 <div className="mr-6 bg-purple-100 text-purple-600 font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
@@ -133,7 +135,7 @@ export default function ServicesPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to get started?</h2>
             <p className="text-lg text-gray-600 mb-8">
-              Contact us today for a free consultation and let's discuss how we can help your business grow online.
+              Let’s talk about your project. Get in touch with us today to schedule a free consultation and explore how we can help you succeed online.
             </p>
             <Link
               to="/contact"
@@ -147,4 +149,3 @@ export default function ServicesPage() {
     </div>
   )
 }
-

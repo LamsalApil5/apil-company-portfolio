@@ -17,8 +17,8 @@ export default function HomePage() {
 
   return (
     <>
-       <SEO 
-        title="Home | APIL" 
+      <SEO
+        title="Home | APIL"
         description="Welcome to My Website. Discover our premium services and innovative projects."
         keywords="APIL, technology solutions, business growth, software development, digital transformation"
       />
@@ -49,27 +49,28 @@ export default function HomePage() {
           <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-                <span className="block">Crafting Digital</span>
-                <span className="bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
-                  Experiences
+                <span className="block">Innovating the Future</span>
+                <span className="bg-gradient-to-r from-blue-600 via-teal-500 to-green-600 bg-clip-text text-transparent">
+                  with Technology
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-600 mb-10 max-w-2xl mx-auto">
-                We build beautiful, functional websites and applications that
-                help businesses grow and succeed in the digital world.
+                We craft powerful, scalable, and secure digital solutions to
+                drive business growth and efficiency in today's fast-paced
+                world.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  to="/contact"
-                  className="px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30 transition-all hover:-translate-y-0.5"
+                  to="/services"
+                  className="px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-teal-500 text-white font-medium shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 transition-all hover:-translate-y-0.5"
                 >
-                  Get Started
+                  Explore Services
                 </Link>
                 <Link
-                  to="/projects"
+                  to="/contact"
                   className="px-8 py-3 rounded-full bg-white text-gray-800 font-medium shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 flex items-center justify-center gap-2"
                 >
-                  View Our Work <ArrowRight size={16} />
+                  Get in Touch <ArrowRight size={16} />
                 </Link>
               </div>
             </div>
@@ -79,7 +80,7 @@ export default function HomePage() {
                 <div
                   className="bg-gradient-to-br from-gray-900 to-gray-800 aspect-[16/9]"
                   style={{
-                    backgroundImage: `url('/placeholder.svg?height=1080&width=1920')`,
+                    backgroundImage: `url('/Image/Home.jpg?height=1080&width=1920')`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}
@@ -97,7 +98,7 @@ export default function HomePage() {
                 What We Offer
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Our comprehensive suite of services designed to elevate your
+                A comprehensive suite of services designed to elevate your
                 digital presence
               </p>
             </div>
@@ -157,31 +158,48 @@ export default function HomePage() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[1, 2, 3].map((project) => (
+              {[
+                {
+                  title: "Planet Spa Pokhara",
+                  description:
+                    "A luxurious spa website that offers booking services and showcases their treatments.",
+                  image: "./Image/PlanetSpa/image.png",
+                  slug: "planet-spa-pokhara", // Slug for project
+                },
+                {
+                  title: "Pradices Marpha",
+                  description:
+                    "A cultural and community-driven website focusing on the Marpha village and its activities.",
+                  image: "./Image/paradisemarpha/image.png",
+                  slug: "pradices-marpha", // Slug for project
+                },
+                {
+                  title: "Lamsal Block",
+                  description:
+                    "A modern real estate website for showcasing residential and commercial properties.",
+                  image: "./Image/lamsal/image.png",
+                  slug: "lamsal-block", // Slug for project
+                },
+              ].map((project, index) => (
                 <div
-                  key={project}
+                  key={index}
                   className="group relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all"
                 >
                   <div className="aspect-[4/3] bg-gray-200 relative overflow-hidden">
                     <img
-                      src={`/placeholder.svg?height=600&width=800`}
-                      alt={`Project ${project}`}
+                      src={project.image}
+                      alt={project.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2">
-                      Project Title {project}
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      A brief description of this amazing project and the value
-                      it delivered.
-                    </p>
+                    <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                    <p className="text-gray-600 mb-4">{project.description}</p>
                     <Link
-                      to={`/projects/${project}`}
+                      to={`/projects/${project.slug}`} // Navigates to the specific project detail page
                       className="inline-flex items-center text-purple-600 font-medium hover:text-purple-700"
                     >
-                      View details <ArrowRight size={16} className="ml-1" />
+                      View Details<ArrowRight size={16} className="ml-1" />
                     </Link>
                   </div>
                 </div>
@@ -198,7 +216,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-500 text-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">

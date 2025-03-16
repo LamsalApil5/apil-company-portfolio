@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-12">
           <div>
             <Link to="/" className="inline-block mb-4">
-              <span className="text-2xl font-bold text-white">Studio</span>
+              <span className="text-2xl font-bold text-white">APIL</span>
             </Link>
             <p className="mb-4 text-gray-400">
               Creating beautiful digital experiences that help businesses grow
