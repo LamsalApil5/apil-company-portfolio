@@ -1,18 +1,25 @@
-import { Link } from "react-router-dom"
-import { Palette, Code, ShoppingBag, Search, Smartphone, Zap } from "lucide-react"
+import { Link } from "react-router-dom";
+import {
+  Palette,
+  Code,
+  ShoppingBag,
+  Search,
+  Smartphone,
+  Zap,
+} from "lucide-react";
 
 export default function ServicesPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-purple-50 to-white">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-purple-50 to-white text-center">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
-            <p className="text-xl text-gray-600">
-              We offer a range of digital solutions tailored to meet your unique business needs. Whether you're starting out or looking to scale, we’re here to help you grow.
-            </p>
-          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">What We Offer</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Whether you're launching a new venture or scaling up, we've got the
+            digital solutions to help you succeed. Let's bring your ideas to
+            life.
+          </p>
         </div>
       </section>
 
@@ -20,37 +27,43 @@ export default function ServicesPage() {
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[ 
+            {[
               {
                 icon: <Palette className="w-10 h-10 text-purple-500" />,
                 title: "Web Design",
-                description: "We create beautiful, responsive websites that not only look great but also engage your audience across all devices."
+                description:
+                  "Stunning, responsive websites designed to engage and convert visitors into customers.",
               },
               {
                 icon: <Code className="w-10 h-10 text-blue-500" />,
                 title: "Web Development",
-                description: "Custom-built web applications with modern technologies, ensuring optimal performance and user experience."
+                description:
+                  "Custom web applications built for performance, security, and seamless user experience.",
               },
               {
                 icon: <ShoppingBag className="w-10 h-10 text-indigo-500" />,
                 title: "E-Commerce",
-                description: "We help you set up online stores that make shopping a breeze for your customers, with secure payments and seamless experiences."
+                description:
+                  "Your online store, built for success—secure, fast, and user-friendly.",
               },
               {
                 icon: <Search className="w-10 h-10 text-purple-500" />,
                 title: "SEO",
-                description: "Improve your search engine visibility and drive organic traffic through effective SEO strategies."
+                description:
+                  "Optimized strategies to boost your online presence and attract the right audience.",
               },
               {
                 icon: <Smartphone className="w-10 h-10 text-blue-500" />,
                 title: "Mobile Apps",
-                description: "From native to cross-platform, we build mobile applications that work smoothly on both iOS and Android devices."
+                description:
+                  "Intuitive mobile experiences that keep users engaged, whether on iOS or Android.",
               },
               {
                 icon: <Zap className="w-10 h-10 text-indigo-500" />,
                 title: "Performance Optimization",
-                description: "We boost the speed and performance of your website to improve user experience and help with better search rankings."
-              }
+                description:
+                  "Faster websites mean better experiences. We make sure your site runs at peak performance.",
+              },
             ].map((service, index) => (
               <div
                 key={index}
@@ -60,7 +73,9 @@ export default function ServicesPage() {
                 <h3 className="text-xl font-bold mb-3">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <Link
-                  to={`/services/${service.title.toLowerCase().replace(/\s+/g, "-")}`}
+                  to={`/services/${service.title
+                    .toLowerCase()
+                    .replace(/\s+/g, "-")}`}
                   className="text-purple-600 font-medium hover:text-purple-700"
                 >
                   Learn more
@@ -72,56 +87,66 @@ export default function ServicesPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 text-center">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl font-bold mb-6">Our Process</h2>
-            <p className="text-lg text-gray-600">
-              We follow a proven methodology to deliver results that align with your goals. Here's how we work:
-            </p>
-          </div>
-
+          <h2 className="text-3xl font-bold mb-6">How We Work</h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-16">
+            We follow a streamlined process to turn your vision into reality,
+            step by step.
+          </p>
           <div className="max-w-4xl mx-auto">
             {[
               {
                 number: "01",
                 title: "Discovery",
                 description:
-                  "We take the time to understand your business, goals, and requirements to ensure we’re aligned right from the start."
+                  "Understanding your business and goals to lay a solid foundation.",
               },
               {
                 number: "02",
                 title: "Planning",
-                description: "We work with you to craft a detailed project plan that outlines timelines, deliverables, and key milestones."
+                description:
+                  "Creating a roadmap with clear milestones to keep things on track.",
               },
               {
                 number: "03",
                 title: "Design",
-                description: "Our designers craft wireframes and visual designs that reflect your brand and address your audience’s needs."
+                description:
+                  "Crafting visuals that reflect your brand and resonate with your audience.",
               },
               {
                 number: "04",
                 title: "Development",
-                description: "Our developers bring your vision to life using clean, efficient code, providing regular updates along the way."
+                description:
+                  "Bringing designs to life with clean, efficient code.",
               },
               {
                 number: "05",
                 title: "Testing",
-                description: "We test every part of the project to ensure quality, performance, and usability before it goes live."
+                description:
+                  "Ensuring everything works smoothly before the big launch.",
               },
               {
                 number: "06",
                 title: "Launch",
-                description: "We help you deploy your project, ensuring a smooth launch, and offer ongoing support to keep things running smoothly."
-              }
+                description:
+                  "Deploying your project and providing ongoing support to keep things running.",
+              },
             ].map((step, index) => (
-              <div key={index} className="flex items-start mb-12 last:mb-0">
-                <div className="mr-6 bg-purple-100 text-purple-600 font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+              <div
+                key={index}
+                className="flex items-center justify-center mb-12 last:mb-0"
+              >
+                <div className="flex flex-col items-center">
+                <div className="mr-6 bg-purple-100 text-purple-600 font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center">
                   {step.number}
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                  <p className="text-gray-600">{step.description}</p>
+                  <h3 className="text-xl font-bold mb-2 text-center">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-600 text-center">
+                    {step.description}
+                  </p>
                 </div>
               </div>
             ))}
@@ -130,22 +155,23 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 text-center">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Ready to get started?</h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Let’s talk about your project. Get in touch with us today to schedule a free consultation and explore how we can help you succeed online.
-            </p>
-            <Link
-              to="/contact"
-              className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
-            >
-              Get in Touch
-            </Link>
-          </div>
+          <h2 className="text-3xl font-bold mb-6">
+            Let's Build Something Great
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+            Ready to take your business to the next level? Get in touch today
+            for a free consultation!
+          </p>
+          <Link
+            to="/contact"
+            className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
+          >
+            Contact Us
+          </Link>
         </div>
       </section>
     </div>
-  )
+  );
 }

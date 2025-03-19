@@ -131,17 +131,21 @@ export default function ProjectsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16">
+      <section className="py-16 bg-gray-50 text-center">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Ready to start your project?</h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Let's work together to create something amazing. Contact us today to get started.
-            </p>
-            <button className="px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5">
-              Get in Touch
-            </button>
-          </div>
+          <h2 className="text-3xl font-bold mb-6">
+            Let's Build Something Great
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+            Ready to take your business to the next level? Get in touch today
+            for a free consultation!
+          </p>
+          <Link
+            to="/contact"
+            className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
+          >
+            Contact Us
+          </Link>
         </div>
       </section>
     </div>

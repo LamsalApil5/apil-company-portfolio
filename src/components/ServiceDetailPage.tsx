@@ -127,7 +127,7 @@ export default function ServiceDetailPage() {
               to="/contact"
               className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-white text-purple-600 font-medium shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
             >
-              Get in Touch
+               Contact Us
             </Link>
           </div>
         </div>
