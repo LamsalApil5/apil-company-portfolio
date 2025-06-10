@@ -18,9 +18,9 @@ export default function HomePage() {
   return (
     <>
       <SEO
-        title="Home | APIL"
+        title="Home | APIL TECH"
         description="Welcome to My Website. Discover our premium services and innovative projects."
-        keywords="APIL, technology solutions, business growth, software development, digital transformation"
+        keywords="APIL,apiltech, technology solutions, business growth, software development, digital transformation"
       />
       <div className="overflow-hidden">
         {/* Hero Section */}

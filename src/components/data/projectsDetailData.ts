@@ -61,7 +61,7 @@ export const projectsDetailData = {
     images: [
       "/Image/paradisemarpha/image.png",
     ],
-    liveLink: "https://www.pradicesmarpha.com",
+    liveLink: "https://www.paradisemarpha.com/",
     status: "Live",
   },
   "lamsal-block": {
