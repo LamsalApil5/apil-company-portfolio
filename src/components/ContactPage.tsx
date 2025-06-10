@@ -67,7 +67,7 @@ export default function ContactPage() {
               {
                 icon: <MapPin className="w-10 h-10 text-indigo-500" />,
                 title: "Visit Us",
-                details: "Pokhara, Nepal",
+                details: "Dulegaunda, Tanahun, Nepal",
                 description: "Open Monday-Friday, 9am-5pm",
               },
             ].map((item, index) => (
@@ -176,12 +176,23 @@ export default function ContactPage() {
 
             {/* Map */}
             <div className="rounded-xl overflow-hidden shadow-md h-[500px] bg-gray-100 flex items-center justify-center">
-              <div className="text-center p-8">
-                <h3 className="text-xl font-bold mb-2">Our Location</h3>
-                <p className="text-gray-600 mb-4">Pokhara, Nepal</p>
-                <p className="text-sm text-gray-500">(This would be an embedded map in a real application)</p>
-              </div>
-            </div>
+  <div className="text-center p-8 w-full h-full">
+    <h3 className="text-xl font-bold mb-2">Our Location</h3>
+    <p className="text-gray-600 mb-4">Pokhara, Nepal</p>
+    <div className="w-full h-[350px]">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d479.6517553621796!2d84.07212193756128!3d28.058099820908033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2snp!4v1749528123169!5m2!1sen!2snp"
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="Pokhara Map"
+      ></iframe>
+    </div>
+  </div>
+</div>
+
           </div>
         </div>
       </section>

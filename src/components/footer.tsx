@@ -110,7 +110,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <p className="text-gray-400">Pokhara, Nepal</p>
+                <p className="text-gray-400">Dulegaunda, Tanahun, Nepal</p>
               </li>
               <li>
                 <p className="text-gray-400">+977 9804116597</p>
