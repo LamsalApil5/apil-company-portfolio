@@ -181,8 +181,8 @@ export default function ContactPage() {
     <p className="text-gray-600 mb-4">Pokhara, Nepal</p>
     <div className="w-full h-[350px]">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d479.6517553621796!2d84.07212193756128!3d28.058099820908033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2snp!4v1749528123169!5m2!1sen!2snp"
-        width="100%"
+       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13532.419135115877!2d84.06959515000001!3d28.0663392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995bb3175bc28db%3A0x617df236bbf1521e!2sApil%20Tech!5e1!3m2!1sen!2snp!4v1749529261638!5m2!1sen!2snp"
+       width="100%"
         height="100%"
         style={{ border: 0 }}
         loading="lazy"
