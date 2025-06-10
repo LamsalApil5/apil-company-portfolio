@@ -178,7 +178,7 @@ export default function ContactPage() {
             <div className="rounded-xl overflow-hidden shadow-md h-[500px] bg-gray-100 flex items-center justify-center">
   <div className="text-center p-8 w-full h-full">
     <h3 className="text-xl font-bold mb-2">Our Location</h3>
-    <p className="text-gray-600 mb-4">Pokhara, Nepal</p>
+    <p className="text-gray-600 mb-4">Dulegaunda, Tanahun, Nepal</p>
     <div className="w-full h-[350px]">
       <iframe
        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13532.419135115877!2d84.06959515000001!3d28.0663392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995bb3175bc28db%3A0x617df236bbf1521e!2sApil%20Tech!5e1!3m2!1sen!2snp!4v1749529261638!5m2!1sen!2snp"
